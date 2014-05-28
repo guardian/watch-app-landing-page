@@ -81,9 +81,13 @@ p {
   margin-bottom: 18px; }
   @media all and (max-width: 61.24em) {
     .guapp__proposition__title {
-      font-size: 36px;
-      line-height: 42px;
+      font-size: 32px;
+      line-height: 38px;
       margin-bottom: 8px; } }
+  @media all and (max-width: 46.24em) {
+    .guapp__proposition__title {
+      font-size: 28px;
+      line-height: 36px; } }
 
 .guapp__proposition__intro {
   color: #fff;
@@ -109,6 +113,9 @@ p {
     margin: 0 auto;
     display: block;
     width: 60%; } }
+@media all and (max-width: 28.125em) {
+  .guapp__proposition__image {
+    width: 90%; } }
 @media all and (min-width: 46.25em) and (max-width: 61.24em) {
   .guapp__proposition__image {
     margin-top: 16px; } }
@@ -121,14 +128,17 @@ p {
 
 @media all and (min-width: 61.25em) and (max-width: 81.24em) {
   .guapp__proposition .guapp__appstores {
-    margin-top: 75px; } }
+    margin-top: 50px; } }
 @media all and (min-width: 81.25em) {
   .guapp__proposition .guapp__appstores {
-    margin-top: 125px; } }
+    margin-top: 100px; } }
 @media all and (max-width: 46.24em) {
   .guapp__proposition .guapp__appstores {
     text-align: center;
     margin: 20px 0; } }
+@media all and (min-width: 46.25em) and (max-width: 61.24em) {
+  .guapp__proposition .guapp__appstores {
+    margin-top: 10px; } }
 
 .guapp__appstore__link img {
   height: 60px; }
@@ -221,8 +231,8 @@ p {
 
 .guapp__feature__title {
   font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 22px;
   margin: 0; }
 
 @media all and (max-width: 61.24em) {
