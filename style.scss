@@ -90,7 +90,36 @@ p {
 
 /* Video */
 .guapp__video {
+    position: relative;
+}
+
+.guapp__video__player {
+    margin: 0 auto;
+    display: block;
+    width: 900px;
+    position: relative;
+}
+
+.guapp__video__player__button {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    margin-top: -28px;
+    cursor: pointer;
     
+    &:hover {
+        opacity: 0.8;
+    }
+}
+.guapp__video__player__button__image {
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
 /* Features */
