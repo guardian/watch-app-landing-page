@@ -217,44 +217,15 @@ p {
       background-size: 44px;
       background-position: 0 -44px; } }
 
-/* iPhone Portrait */
-@media screen and (max-width: 320px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .guapp__video__player__button,
   .guapp__video__player__poster {
     display: none; } }
-/* iPhone Landscape */
-@media screen and (min-width: 321px) and (max-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .guapp__video__player__button,
   .guapp__video__player__poster {
     display: none; } }
-/* iPhone Retina Portrait */
-@media screen and (max-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-  .guapp__video__player__button,
-  .guapp__video__player__poster {
-    display: none; } }
-/* iPhone Retina Landscape */
-@media screen and (min-width: 321px) and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .guapp__video__player__button,
-  .guapp__video__player__poster {
-    display: none; } }
-/* iPad Portrait */
-@media screen and (orientation: portrait) {
-  .guapp__video__player__button,
-  .guapp__video__player__poster {
-    display: none; } }
-/* iPad Landscape */
-@media screen and (orientation: landscape) {
-  .guapp__video__player__button,
-  .guapp__video__player__poster {
-    display: none; } }
-/* iPad Portrait */
-/* iPad Portrait Retina */
-@media screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .guapp__video__player__button,
-  .guapp__video__player__poster {
-    display: none; } }
-/* iPad Landscape Retina */
-@media screen and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .guapp__video__player__button,
   .guapp__video__player__poster {
     display: none; } }
