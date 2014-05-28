@@ -127,10 +127,10 @@ p {
 
 @media all and (min-width: 61.25em) and (max-width: 81.24em) {
   .guapp__proposition .guapp__appstores {
-    margin-top: 50px; } }
+    margin-top: 30px; } }
 @media all and (min-width: 81.25em) {
   .guapp__proposition .guapp__appstores {
-    margin-top: 100px; } }
+    margin-top: 60px; } }
 @media all and (max-width: 46.24em) {
   .guapp__proposition .guapp__appstores {
     text-align: center;

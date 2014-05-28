@@ -154,11 +154,11 @@ p {
 }
 .guapp__proposition .guapp__appstores {
     @include mq(desktop, wide) {
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     @include mq($from: wide) {
-        margin-top: 100px;
+        margin-top: 60px;
     }
 
     @include mq($to: tablet) {
