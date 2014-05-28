@@ -61,7 +61,10 @@ p {
 /* Proposition */
 .guapp__proposition {
     color: #fff;
+    background-image: url("images/proposition.png");
     background-color: #214583;
+    background-position: center center;
+    background-size: cover;
     padding: 2em 0;
     overflow: auto;
 }
@@ -164,6 +167,12 @@ p {
 }
 .guapp__feature {
     margin-bottom: 20px;
+    
+    img {
+        max-width: 100%;
+        border-bottom: 1px solid #dddbd7;
+        margin-bottom: 12px;
+    }
     &:nth-of-type(2n+1) {
         @include mq(mobile, desktop) {
             clear: both;
