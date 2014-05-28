@@ -66,8 +66,10 @@ p {
     overflow: auto;
 }
 .guapp__proposition__container {
-    width: 600px;
-    float: left;
+    @include mq($from: tablet) {
+        width: 600px;
+        float: left;
+    }
 }
 .guapp__proposition__title {
     font-family: "Guardian Titlepiece";
@@ -77,15 +79,27 @@ p {
     text-transform: lowercase;
     -webkit-font-smoothing: antialiased;
     margin-bottom: 18px;
+    
+    @include mq($to: tablet) {
+        font-size: 36px;
+        line-height: 42px;
+    }
 }
 .guapp__proposition__intro {
     color: #fff;
     font-size: 20px;
     line-height: 26px;
     opacity: 0.8;
+    
+    @include mq($to: tablet) {
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 .guapp__proposition__image {
-    float: right;
+    @include mq($from: tablet) {
+        float: right;
+    }
 }
 
 /* Video */
@@ -98,6 +112,10 @@ p {
     display: block;
     width: 900px;
     position: relative;
+    
+    @include mq($to: desktop) {
+        width: 100%;
+    }
 }
 
 .guapp__video__player__button {
@@ -116,10 +134,19 @@ p {
     &:hover {
         opacity: 0.8;
     }
+    
+    @include mq($to: tablet) {
+        font-size: 16px;
+    }
 }
 .guapp__video__player__button__image {
     vertical-align: middle;
     margin-right: 8px;
+    
+    @include mq($to: tablet) {
+        width: 44px;
+        height: 44px;
+    }
 }
 
 /* Features */
@@ -128,13 +155,36 @@ p {
     padding: 2em 0;
 }
 .guapp__features .grid__item {
-    width: 33%;
+    @include mq(mobile, desktop) {
+        width: 50%;
+    }
+    @include mq($from: desktop) {
+        width: 33%;
+    }
+}
+.guapp__feature {
+    margin-bottom: 20px;
+    &:nth-of-type(2n+1) {
+        @include mq(mobile, desktop) {
+            clear: both;
+        }
+    }
+    &:nth-of-type(3n+1) {
+        @include mq($from: desktop) {
+            clear: both;
+        }
+    }
 }
 .guapp__feature__title {
     font-weight: bold;
     font-size: 16px;
     line-height: 18px;
     margin: 0;
+}
+.guapp__feature--save__image {
+    @include mq($to: desktop) {
+        display: none;
+    }
 }
 
 /* Footer */
@@ -163,8 +213,4 @@ p {
 
 .content {
     padding: 0;
-
-    @include mq(tablet, wide) {
-        background-color: aqua;
-    }
 }
