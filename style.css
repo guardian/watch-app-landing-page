@@ -282,5 +282,6 @@ video::-webkit-media-controls {
 .content {
   padding: 0; }
 
-.ad-slot {
+.ad-slot,
+.top-banner-ad-container {
   display: none; }
