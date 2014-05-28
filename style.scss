@@ -1,0 +1,14 @@
+@import "sass/_mq";
+
+.l-footer {
+	border-top: none;
+}
+
+.content {
+	padding: 0;
+
+@include mq(tablet, wide) {
+	background-color: aqua;
+}
+
+}

@@ -1,0 +1,8 @@
+.l-footer {
+  border-top: none; }
+
+.content {
+  padding: 0; }
+  @media all and (min-width: 46.25em) and (max-width: 81.24em) {
+    .content {
+      background-color: aqua; } }
