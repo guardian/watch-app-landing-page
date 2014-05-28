@@ -73,8 +73,14 @@ p {
         width: 560px;
         float: left;
     }
+
     @include mq(tablet, desktop) {
         width: 420px;
+    }
+    
+    @include mq($to: tablet) {
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
 .guapp__proposition__title {
@@ -121,13 +127,34 @@ p {
         display: block;
         width: 60%;
     }
+    
+    @include mq(tablet, desktop) {
+        margin-top: 16px;
+    }
+    
+    &--mobile {
+        @include mq($from: tablet) {
+            display: none;
+        }
+    }
+    
+    &--desktop {
+        @include mq($to: tablet) {
+            display: none;
+        }
+    }
 }
 .guapp__proposition .guapp__appstores {
-    @include mq(tablet, wide) {
+    @include mq(desktop, wide) {
         margin-top: 75px;
     }
     @include mq($from: wide) {
         margin-top: 125px;
+    }
+    
+    @include mq($to: tablet) {
+        text-align: center;
+        margin: 20px 0;
     }
 }
 .guapp__appstore__link {
@@ -140,7 +167,9 @@ p {
     }
     
     &:nth-of-type(1) {
-        margin-right: 24px;
+        @include mq($from: desktop) {
+            margin-right: 24px;
+        }
     }
 }
 
@@ -218,7 +247,11 @@ p {
     }
 }
 .guapp__feature {
-    margin-bottom: 20px;
+    margin-bottom: 34px;
+    
+    @include mq($to: tablet) {
+        margin-bottom: 20px;
+    }
     
     img {
         max-width: 100%;

@@ -66,6 +66,10 @@ p {
 @media all and (min-width: 46.25em) and (max-width: 61.24em) {
   .guapp__proposition__container {
     width: 420px; } }
+@media all and (max-width: 46.24em) {
+  .guapp__proposition__container {
+    max-width: 500px;
+    margin: 0 auto; } }
 
 .guapp__proposition__title {
   font-family: "Guardian Titlepiece";
@@ -105,20 +109,34 @@ p {
     margin: 0 auto;
     display: block;
     width: 60%; } }
+@media all and (min-width: 46.25em) and (max-width: 61.24em) {
+  .guapp__proposition__image {
+    margin-top: 16px; } }
+@media all and (min-width: 46.25em) {
+  .guapp__proposition__image--mobile {
+    display: none; } }
+@media all and (max-width: 46.24em) {
+  .guapp__proposition__image--desktop {
+    display: none; } }
 
-@media all and (min-width: 46.25em) and (max-width: 81.24em) {
+@media all and (min-width: 61.25em) and (max-width: 81.24em) {
   .guapp__proposition .guapp__appstores {
     margin-top: 75px; } }
 @media all and (min-width: 81.25em) {
   .guapp__proposition .guapp__appstores {
     margin-top: 125px; } }
+@media all and (max-width: 46.24em) {
+  .guapp__proposition .guapp__appstores {
+    text-align: center;
+    margin: 20px 0; } }
 
 .guapp__appstore__link img {
   height: 60px; }
 .guapp__appstore__link:hover {
   opacity: 0.8; }
-.guapp__appstore__link:nth-of-type(1) {
-  margin-right: 24px; }
+@media all and (min-width: 61.25em) {
+  .guapp__appstore__link:nth-of-type(1) {
+    margin-right: 24px; } }
 
 /* Video */
 .guapp__video {
@@ -183,7 +201,10 @@ p {
     width: 33%; } }
 
 .guapp__feature {
-  margin-bottom: 20px; }
+  margin-bottom: 34px; }
+  @media all and (max-width: 46.24em) {
+    .guapp__feature {
+      margin-bottom: 20px; } }
   .guapp__feature img {
     max-width: 100%;
     border-bottom: 1px solid #dddbd7;
