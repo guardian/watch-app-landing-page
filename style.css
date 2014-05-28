@@ -122,7 +122,7 @@ p {
 
 /* Video */
 .guapp__video {
-  position: relative; }
+  margin: 12px 0; }
 
 .guapp__video__player {
   margin: 0 auto;
@@ -146,14 +146,23 @@ p {
   margin-top: -28px;
   cursor: pointer; }
   .guapp__video__player__button:hover {
-    opacity: 0.8; }
+    color: #222; }
+    .guapp__video__player__button:hover .guapp__video__player__button__image {
+      background-position: 0px 0px; }
   @media all and (max-width: 46.24em) {
     .guapp__video__player__button {
       font-size: 16px; } }
 
 .guapp__video__player__button__image {
   vertical-align: middle;
-  margin-right: 8px; }
+  margin-right: 8px;
+  display: inline-block;
+  background-image: url("images/btn--play.png");
+  width: 64px;
+  height: 64px;
+  background-size: 64px;
+  background-position: 0 -64px;
+  background-repeat: no-repeat; }
   @media all and (max-width: 46.24em) {
     .guapp__video__player__button__image {
       width: 44px;
