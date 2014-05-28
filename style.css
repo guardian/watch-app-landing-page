@@ -53,18 +53,30 @@ p {
 .guapp__proposition {
   color: #fff;
   background-color: #214583;
-  padding: 2em 0; }
+  padding: 2em 0;
+  overflow: auto; }
+
+.guapp__proposition__container {
+  width: 600px;
+  float: left; }
 
 .guapp__proposition__title {
   font-family: "Guardian Titlepiece";
   color: #fff;
   font-size: 48px;
-  line-height: 38px; }
+  line-height: 54px;
+  text-transform: lowercase;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 18px; }
 
 .guapp__proposition__intro {
   color: #fff;
   font-size: 20px;
-  line-height: 24px; }
+  line-height: 26px;
+  opacity: 0.8; }
+
+.guapp__proposition__image {
+  float: right; }
 
 /* Video */
 /* Features */
