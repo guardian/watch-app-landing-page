@@ -3,4 +3,5 @@ $("article").html('    <div class="guapp__proposition">        <div class="gs-co
 $(".guapp__video__player__button").click(function() {
     $(".guapp__video__player")[0].play();
     $(".guapp__video__player__button").hide();
+    $(".guapp__video__poster").hide();
 });
