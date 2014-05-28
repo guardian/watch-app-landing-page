@@ -293,16 +293,28 @@ p {
         overflow: auto;
     }
 }
-.guapp__footer .grid__item {
-    width: 50%;
+
+.guapp__footer__wrapper {
+    text-align: center;
 }
-.guapp__footer .guapp__tagline {
-    width: 60%;
-    margin-left: 40%;
+
+.guapp__tagline,
+.guapp__appstores {
+    display: inline-block;
+    vertical-align: middle;
 }
-.guapp__footer .guapp__stores {
-    width: 60%;
-    margin-right: 40%;
+
+.guapp__tagline {
+    @include mq($from: tablet) {
+        margin-right: 20px;
+    }
+}
+
+.guapp__appstores {
+    @include mq($to: tablet) {
+        display: block;
+        margin-top: 20px;
+    }
 }
 
 .guapp__footer__designed {

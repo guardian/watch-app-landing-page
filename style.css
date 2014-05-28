@@ -235,16 +235,22 @@ p {
   .guapp__footer .gs-container {
     overflow: auto; }
 
-.guapp__footer .grid__item {
-  width: 50%; }
+.guapp__footer__wrapper {
+  text-align: center; }
 
-.guapp__footer .guapp__tagline {
-  width: 60%;
-  margin-left: 40%; }
+.guapp__tagline,
+.guapp__appstores {
+  display: inline-block;
+  vertical-align: middle; }
 
-.guapp__footer .guapp__stores {
-  width: 60%;
-  margin-right: 40%; }
+@media all and (min-width: 46.25em) {
+  .guapp__tagline {
+    margin-right: 20px; } }
+
+@media all and (max-width: 46.24em) {
+  .guapp__appstores {
+    display: block;
+    margin-top: 20px; } }
 
 .guapp__footer__designed {
   margin-top: 40px;
