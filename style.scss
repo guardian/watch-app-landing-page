@@ -192,11 +192,21 @@ p {
     margin: 12px 0;
 }
 
+.guapp__video__wrapper {
+    padding-top: 56.25%;
+    position: relative;
+    height: 0;
+}
+
 .guapp__video__player {
     margin: 0 auto;
     display: block;
-    width: 900px;
-    position: relative;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     
     @include mq($to: desktop) {
         width: 100%;
