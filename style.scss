@@ -124,15 +124,24 @@ p {
 }
 .guapp__appstores {
     @include mq(tablet, wide) {
-        margin-top: 40px;
+        margin-top: 75px;
     }
     @include mq($from: wide) {
-        margin-top: 100px;
+        margin-top: 125px;
     }
 }
-
-.guapp__appstore__link:nth-of-type(1) {
-    margin-right: 24px;
+.guapp__appstore__link {
+    img {
+        height: 60px;
+    }
+    
+    &:hover {
+        opacity: 0.8;
+    }
+    
+    &:nth-of-type(1) {
+        margin-right: 24px;
+    }
 }
 
 /* Video */

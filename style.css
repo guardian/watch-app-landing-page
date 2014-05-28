@@ -108,11 +108,15 @@ p {
 
 @media all and (min-width: 46.25em) and (max-width: 81.24em) {
   .guapp__appstores {
-    margin-top: 40px; } }
+    margin-top: 75px; } }
 @media all and (min-width: 81.25em) {
   .guapp__appstores {
-    margin-top: 100px; } }
+    margin-top: 125px; } }
 
+.guapp__appstore__link img {
+  height: 60px; }
+.guapp__appstore__link:hover {
+  opacity: 0.8; }
 .guapp__appstore__link:nth-of-type(1) {
   margin-right: 24px; }
 
