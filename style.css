@@ -170,6 +170,14 @@ p {
 video::-webkit-media-controls {
   display: none !important; }
 
+.guapp__video__poster {
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; }
+
 .guapp__video__player__button {
   font-size: 20px;
   color: #333;
@@ -189,6 +197,9 @@ video::-webkit-media-controls {
   @media all and (max-width: 46.24em) {
     .guapp__video__player__button {
       font-size: 16px; } }
+  @media all and (max-width: 46.24em) {
+    .guapp__video__player__button span {
+      display: none; } }
 
 .guapp__video__player__button__image {
   vertical-align: middle;
