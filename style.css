@@ -219,15 +219,15 @@ p {
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .guapp__video__player__button,
-  .guapp__video__player__poster {
+  .guapp__video__poster {
     display: none; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .guapp__video__player__button,
-  .guapp__video__player__poster {
+  .guapp__video__poster {
     display: none; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .guapp__video__player__button,
-  .guapp__video__player__poster {
+  .guapp__video__poster {
     display: none; } }
 /* Features */
 .guapp__features {
