@@ -70,22 +70,26 @@ p {
 }
 .guapp__proposition__container {
     @include mq($from: tablet) {
-        width: 600px;
+        width: 560px;
         float: left;
+    }
+    @include mq(tablet, desktop) {
+        width: 420px;
     }
 }
 .guapp__proposition__title {
     font-family: "Guardian Titlepiece";
     color: #fff;
-    font-size: 48px;
+    font-size: 46px;
     line-height: 54px;
     text-transform: lowercase;
     -webkit-font-smoothing: antialiased;
     margin-bottom: 18px;
     
-    @include mq($to: tablet) {
+    @include mq($to: desktop) {
         font-size: 36px;
         line-height: 42px;
+        margin-bottom: 8px;
     }
 }
 .guapp__proposition__intro {
@@ -94,15 +98,41 @@ p {
     line-height: 26px;
     opacity: 0.8;
     
-    @include mq($to: tablet) {
+    @include mq($to: desktop) {
         font-size: 16px;
         line-height: 22px;
     }
 }
 .guapp__proposition__image {
+    @include mq(tablet, desktop) {
+        width: 300px;
+    }
+    
+    @include mq(desktop, wide) {
+        width: 400px;
+    }
+
     @include mq($from: tablet) {
         float: right;
     }
+    
+    @include mq($to: tablet) {
+        margin: 0 auto;
+        display: block;
+        width: 60%;
+    }
+}
+.guapp__appstores {
+    @include mq(tablet, wide) {
+        margin-top: 40px;
+    }
+    @include mq($from: wide) {
+        margin-top: 100px;
+    }
+}
+
+.guapp__appstore__link:nth-of-type(1) {
+    margin-right: 24px;
 }
 
 /* Video */
