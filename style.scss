@@ -1,5 +1,11 @@
 @import "sass/_mq";
 
+/* Font */
+@font-face {
+	font-family: "Guardian Titlepiece";
+	src: url("fonts/GdnTitlepiece.otf");
+}
+
 /* Base styles */
 *,
 *:before,
@@ -59,9 +65,10 @@ p {
     padding: 2em 0;
 }
 .guapp__proposition__title {
+    font-family: "Guardian Titlepiece";
     color: #fff;
-    font-size: 32px;
-    line-height: 28px;
+    font-size: 48px;
+    line-height: 38px;
 }
 .guapp__proposition__intro {
     color: #fff;
