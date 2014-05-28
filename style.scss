@@ -199,6 +199,8 @@ p {
     @include mq($to: tablet) {
         width: 44px;
         height: 44px;
+        background-size: 44px;
+        background-position: 0 -44px;
     }
 }
 
@@ -208,7 +210,7 @@ p {
     padding: 2em 0;
 }
 .guapp__features .grid__item {
-    @include mq(mobile, desktop) {
+    @include mq(450px, desktop) {
         width: 50%;
     }
     @include mq($from: desktop) {
@@ -222,9 +224,13 @@ p {
         max-width: 100%;
         border-bottom: 1px solid #dddbd7;
         margin-bottom: 12px;
+        
+        @include mq($to: 450px) {
+            display: none;
+        }
     }
     &:nth-of-type(2n+1) {
-        @include mq(mobile, desktop) {
+        @include mq(450px, desktop) {
             clear: both;
         }
     }

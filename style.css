@@ -166,14 +166,16 @@ p {
   @media all and (max-width: 46.24em) {
     .guapp__video__player__button__image {
       width: 44px;
-      height: 44px; } }
+      height: 44px;
+      background-size: 44px;
+      background-position: 0 -44px; } }
 
 /* Features */
 .guapp__features {
   background-color: #f6f6f6;
   padding: 2em 0; }
 
-@media all and (min-width: 20em) and (max-width: 61.24em) {
+@media all and (min-width: 28.125em) and (max-width: 61.24em) {
   .guapp__features .grid__item {
     width: 50%; } }
 @media all and (min-width: 61.25em) {
@@ -186,7 +188,10 @@ p {
     max-width: 100%;
     border-bottom: 1px solid #dddbd7;
     margin-bottom: 12px; }
-  @media all and (min-width: 20em) and (max-width: 61.24em) {
+    @media all and (max-width: 28.125em) {
+      .guapp__feature img {
+        display: none; } }
+  @media all and (min-width: 28.125em) and (max-width: 61.24em) {
     .guapp__feature:nth-of-type(2n+1) {
       clear: both; } }
   @media all and (min-width: 61.25em) {
