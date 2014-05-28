@@ -107,10 +107,10 @@ p {
     width: 60%; } }
 
 @media all and (min-width: 46.25em) and (max-width: 81.24em) {
-  .guapp__appstores {
+  .guapp__proposition .guapp__appstores {
     margin-top: 75px; } }
 @media all and (min-width: 81.25em) {
-  .guapp__appstores {
+  .guapp__proposition .guapp__appstores {
     margin-top: 125px; } }
 
 .guapp__appstore__link img {
@@ -217,6 +217,11 @@ p {
 .guapp__footer .guapp__stores {
   width: 60%;
   margin-right: 40%; }
+
+.guapp__footer__designed {
+  margin: 40px 0;
+  text-align: center;
+  font-family: "AgateSans","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; }
 
 .l-footer {
   border-top: none; }
