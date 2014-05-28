@@ -152,20 +152,11 @@ p {
 .guapp__video {
   margin: 12px 0; }
 
-.guapp__video__wrapper {
-  padding-top: 56.25%;
-  position: relative;
-  height: 0; }
-
 .guapp__video__player {
   margin: 0 auto;
   display: block;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; }
+  width: 900px;
+  position: relative; }
   @media all and (max-width: 61.24em) {
     .guapp__video__player {
       width: 100%; } }
