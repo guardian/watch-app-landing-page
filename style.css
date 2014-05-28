@@ -1,3 +1,96 @@
+/* Base styles */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "EgyptianText", serif;
+  margin: 0; }
+
+h1 {
+  font-family: "EgyptianHeadline", serif; }
+
+p {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "EgyptianText";
+  margin: 7px 0; }
+
+/* Utitlities */
+.gs-container {
+  margin: 0 auto;
+  max-width: 81.25em;
+  /* 1300px */ }
+
+.list {
+  margin: 0;
+  padding: 0; }
+
+.list__item {
+  list-style: none; }
+
+.grid {
+  overflow: hidden;
+  margin: 0 -1em; }
+
+.grid__item {
+  display: block;
+  float: left;
+  padding: 0 1em;
+  width: 100%; }
+
+/* Proposition */
+.guapp__proposition {
+  color: #fff;
+  background-color: #214583;
+  padding: 2em 0; }
+
+.guapp__proposition__title {
+  color: #fff;
+  font-size: 32px;
+  line-height: 28px; }
+
+.guapp__proposition__intro {
+  color: #fff;
+  font-size: 20px;
+  line-height: 24px; }
+
+/* Video */
+/* Features */
+.guapp__features {
+  background-color: #f6f6f6;
+  padding: 2em 0; }
+
+.guapp__features .grid__item {
+  width: 33%; }
+
+.guapp__feature__title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0; }
+
+/* Footer */
+.guapp__footer {
+  padding: 2em 0; }
+
+.guapp__footer .grid__item {
+  width: 50%; }
+
+.guapp__footer .guapp__tagline {
+  width: 60%;
+  margin-left: 40%; }
+
+.guapp__footer .guapp__stores {
+  width: 60%;
+  margin-right: 40%; }
+
 .l-footer {
   border-top: none; }
 
