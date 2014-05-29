@@ -18,10 +18,10 @@ define([], function() {
             loadingEl.innerHTML = 'Loading...';
             el.appendChild(loadingEl);
 
-            LazyLoad.css('http://gapps.sammorr.is/style.css');
+            LazyLoad.css('https://s3-eu-west-1.amazonaws.com/app-promotional-static/guardianapppage/style.css');
             LazyLoad.js([
                 '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
-                'http://gapps.sammorr.is/apps.js'
+                'https://s3-eu-west-1.amazonaws.com/app-promotional-static/guardianapppage/apps.js'
             ]);
         }
     };
