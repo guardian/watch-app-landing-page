@@ -1,4 +1,4 @@
-guardianapppage
+Guardian App Landing Page
 ===============
 
 An interactive for `theguardian.com` that promotes the new Guardian apps for iOS and Android.
