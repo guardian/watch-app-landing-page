@@ -1,5 +1,43 @@
 @import "sass/_mq";
 
+
+/* Fonts - to be removed */
+$guss-webfonts-base-url: 'bower_components/guss-webfonts/';
+$guss-webfonts-charset: 'original';
+$guss-webfonts-hinting: 'off';
+$guss-webfonts-kerning: 'on';
+$guss-webfonts-version: '0.1.0';
+@import 'bower_components/guss-webfonts/src/_webfonts';
+
+@include guss-webfonts(
+    (
+        'Guardian Agate Sans 1 Web': (
+            (weight: 'regular', style: 'normal'),
+            (weight: 'bold',    style: 'normal', charset: 'original'),
+        ),
+        'Guardian Text Egyptian Web': (
+            (weight: 'regular',  style: 'normal'),
+            (weight: 'regular',  style: 'italic'),
+            (weight: 'medium',   style: 'normal', version: '0.2.0', use-as: (weight: 'bold')),
+            (weight: 'medium',   style: 'italic', hinting: 'off', use-as: (weight: 'bold', style: 'normal')),
+        ),
+        'Guardian Egyptian Web': (
+            (weight: 'light',    style: 'normal', kerning: 'off'),
+            (weight: 'regular',  style: 'normal'),
+            (weight: 'semibold', style: 'normal', use-as: (weight: 'ultrablack')),
+        ),
+        'Guardian Text Sans Web': (
+            (weight: 'regular',  style: 'normal'),
+            (weight: 'regular',  style: 'italic'),
+            (weight: 'medium',   style: 'normal', use-as: (weight: 'bold')),
+            (weight: 'medium',   style: 'italic', use-as: (weight: 'bold', style: 'italic')),
+        ),
+        'Guardian Sans Web': (
+            (weight: 'regular',  style: 'normal'),
+        )
+    )
+);
+
 /* Font */
 @font-face {
 	font-family: "Guardian Titlepiece";
@@ -28,7 +66,7 @@ h1 {
 p {
     font-size: 14px;
     line-height: 22px;
-    font-family: "EgyptianText";
+    font-family: "Guardian Text Egyptian Web";
     margin: 7px 0;
 }
 
@@ -124,7 +162,7 @@ p {
     }
 
     @include mq($from: tablet) {
-        float: right;
+        float: left;
     }
     
     @include mq($to: tablet) {
@@ -386,7 +424,7 @@ and (max-device-width : 480px) {
 .guapp__footer__designed {
     margin-top: 40px;
     text-align: center;
-    font-family: "AgateSans","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-family: "Guardian Agate Sans 1 Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 }
 
 .l-footer {
@@ -400,4 +438,46 @@ and (max-device-width : 480px) {
 .ad-slot,
 .top-banner-ad-container {
     display: none !important;
+}
+
+/* animation */
+
+.fadeAnimation {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeUp {
+  -webkit-animation-name: fadeUp;
+  animation-name: fadeUp;
 }
