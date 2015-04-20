@@ -1,12 +1,12 @@
 @import "sass/_mq";
 
 
-/* Fonts - to be removed */
+/* Fonts - to be removed 
 $guss-webfonts-base-url: 'bower_components/guss-webfonts/';
 $guss-webfonts-charset: 'original';
 $guss-webfonts-hinting: 'off';
 $guss-webfonts-kerning: 'on';
-$guss-webfonts-version: '0.1.0';
+$guss-webfonts-version: 'webfonts';
 @import 'bower_components/guss-webfonts/src/_webfonts';
 
 @include guss-webfonts(
@@ -36,7 +36,7 @@ $guss-webfonts-version: '0.1.0';
             (weight: 'regular',  style: 'normal'),
         )
     )
-);
+); */
 
 /* Font */
 @font-face {
@@ -57,8 +57,9 @@ body {
     color: #333;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: "EgyptianText", serif;
+    font-family: "Guardian Egyptian Web", serif;
     margin: 0;
+    font-style: normal;
 }
 h1 {
     font-family: "EgyptianHeadline", serif;
@@ -66,8 +67,9 @@ h1 {
 p {
     font-size: 14px;
     line-height: 22px;
-    font-family: "Guardian Text Egyptian Web";
+    font-family: "Guardian Egyptian Web";
     margin: 7px 0;
+    font-style: normal;
 }
 
 /* Utitlities */
@@ -103,7 +105,7 @@ p {
     background-color: #214583;
     background-position: center center;
     background-size: cover;
-    padding: 2em 0;
+    padding: 2em 0 0 0;
     overflow: auto;
 }
 .guapp__proposition__container {
@@ -153,16 +155,25 @@ p {
     }
 }
 .guapp__proposition__image {
+	
+	margin-top: -50px;
+	
     @include mq(tablet, desktop) {
         width: 300px;
+        
+        
     }
     
     @include mq(desktop, wide) {
-        width: 400px;
+        width: 500px;
+        
+        
     }
 
     @include mq($from: tablet) {
-        float: left;
+        float: right;
+        
+        
     }
     
     @include mq($to: tablet) {
@@ -185,11 +196,41 @@ p {
         }
     }
     
-    &--desktop {
-        @include mq($to: tablet) {
+ 
+  
+  &--desktop{
+		 @include mq($from: desktop) {
+		 display: block;
+		 }
+	}
+	
+	&--desktop{
+		 @media (max-width: 1056px) {
+			 display: none;
+			  }
+
+	}
+  
+	&--desktop{
+		 @include mq($to: tablet) {
+		 display: none;
+		 }
+	}
+    
+    &--tablet {
+	     @include mq($from: desktop) {
             display: none;
         }
     }
+    
+       &--tablet {
+	     @include mq($to: tablet) {
+            display: none;
+        }
+    }
+    
+    
+    
 }
 .guapp__proposition .guapp__appstores {
     @include mq(desktop, wide) {
@@ -382,6 +423,7 @@ and (max-device-width : 480px) {
     font-size: 18px;
     line-height: 22px;
     margin: 0;
+    font-style: normal;
 }
 .guapp__feature--save__image {
     @include mq($to: desktop) {
@@ -440,44 +482,59 @@ and (max-device-width : 480px) {
     display: none !important;
 }
 
-/* animation */
+.button.watch__more__button{
+	background-color:#005689;
+	color: white;
+	border-radius: 62.5em;
+	vertical-align: top;
+	border-width: 0.0625em;
+	box-sizing: border-box;
+	font-family: "Guardian Text Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	padding: 0 0.625em;
+	margin-right: 0.625em;
+	line-height: 1.75em;
+	height: 26px !important;
+	display: block;
+	width: 150px;
+	float: left;
+	margin-top: 10px;
+	
+	&:hover{
+		background-color: #005689;
+		border: #005689;
+	}
+}
 
-.fadeAnimation {
+.animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-@-webkit-keyframes fadeUp {
+
+@-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: none;
-    transform: none;
   }
 }
 
-@keyframes fadeUp {
+@keyframes fadeIn {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: none;
-    transform: none;
   }
 }
 
-.fadeUp {
-  -webkit-animation-name: fadeUp;
-  animation-name: fadeUp;
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
+

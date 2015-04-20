@@ -1,327 +1,39 @@
-/* Fonts - to be removed */
-/**
- * Base URL
- * URL can be an absolute HTTP (`//pasteup.guim.co.uk/fonts/`) or relative (`../`)
- *
- * @type String
- *
- * @group webfonts
- */
-/**
- * Version of the fonts to use
- *
- * @type String
- *
- * @group webfonts
- */
-/**
- * Hinting
- *
- * - cleartype: larger file, better rendering in Windows
- * - auto: even larger file, better rendering in Windows in Chrome with
- *   font-smoothing disabled (the default in XP pre-servicepack 1)
- * - off: smaller files, render well on HiDPI displays
- *
- *  @type String
- *
- * @group webfonts
- */
-/**
- * Kerning
- *
- * - on: larger file, better rendering
- * - off: smaller files
- *
- *  @type String
- *
- * @group webfonts
- */
-/**
- * Charset
- *
- * - ascii: 256 characters only, very small
- * - latin1: latin 1 character set
- * - original: full character set
- *
- * @type String
- *
- * @group webfonts
- */
-/**
- * Complete path
- *
- * @type String
- *
- * @group webfonts
- */
-/**
- * Human-readable Font-weights
- *
- * @type Map
- *
- * @group webfonts
- */
-/* Extra fonts
-   ========================================================================== */
-/**
- * Extra fonts directory
- *
- * @type String
- *
- * @group webfonts
- */
-/**
- * Extra fonts list
- *
- * @type List
- *
- * @group webfonts
- */
-/* Font registry
-   ========================================================================== */
-/**
- * Font registry
- *
- * @type Map
- *
- * @group webfonts
- */
-/**
- * Machine-readable CSS font-weight.
- *
- * @param {String} $keyword - Human-readable keyword in $guss-font-weights
- *
- * @requires {variable} guss-font-weights
- *
- * @example scss
- * font-weight: guss-font-weight(light);
- *
- * @return {Number} - CSS font-weight
- *
- * @group webfonts
- */
-/**
- * Is this font stored in `$guss-extras-directory`?
- *
- * @param {String} $font-family - Font to look for
- *
- * @requires {variable} guss-webfonts-extras
- *
- * @return {Bool}
- *
- * @group webfonts
- */
-/**
- * Replace `$search` by `$replace` in `$string`.
- *
- * @author Hugo Giraudel
- *
- * @param {String} $string - string to update
- * @param {String} $search - value to replace
- * @param {String} $replace ('') - new value
- *
- * @return {String}
- *
- * @group webfonts
- */
-/**
- * Remove white space in $string
- *
- * @requires {function} str-replace
- *
- * @param {String} $string - string to update
- *
- * @return {String}
- *
- * @group webfonts
- */
-/**
- * Capitalise first letter of $string
- *
- * @param {String} $string - string to update
- *
- * @return {String}
- *
- * @group webfonts
- */
-/**
- * Compose webfont filename
- *
- * @param {String} $font-family - font family
- * @param {String} $weight - weight, member of $guss-font-weights
- * @param {String} $style - normal | italic
- *
- * @requires {function} str-capitalise
- * @requires {function} str-remove-white-space
- *
- * @return {String}
- *
- * @group webfonts
- */
-/**
- * Compose webfont path
- * "My Font" is in the MyFont/ directory
- * "Extra" fonts are stored in `$guss-extras-directory`.
- *
- * @param {String} $font-family - font name
- * @param {String} $base-path ($guss-webfonts-path) - base path of where to look for this font
- *
- * @requires {variable} guss-extras-directory
- * @requires {function} str-remove-white-space
- *
- * @return {String} - Path to the font
- *
- * @group webfonts
- */
-/**
- * Look for `$needle` in `$haystack`.
- *
- * @param {List}   $haystack - List to search in
- * @param {String} $needle - The string to look for
- *
- * @return {Bool}
- *
- * @group webfonts
- */
-/**
- * Output a @font-face declaration at root level.
- *
- * @param {String} $family - List to search in
- * @param {String} $file - The filename
- * @param {String} $base-path - Directory where the font is stored
- * @param {Number} $weight (400) - CSS font-weight
- * @param {String} $style (normal) - CSS font-style
- * @param {String} $url ($guss-webfonts-base-url) - URL
- *
- * @requires {variable} guss-webfonts-base-url
- *
- * @group webfonts
- */
-/**
- * Output the @font-face declaration for a Guss webfont.
- *
- * @param {Number} $font-family - ID of the font in $guss-webfonts
- * @param {Map} $properties - weight (member of `$guss-font-weights`), style (`normal` | `italic`), version, hinting, kerning, charset
- * @param {Map} $overrides - weight (member of `$guss-font-weights`), style (`normal` | `italic`)
- *
- * @requires {variable} guss-webfonts
- * @requires {function} compose-webfont-filename
- * @requires {function} compose-webfont-path
- * @requires {function} guss-font-weight
- * @requires {mixin} guss-at-font-face
- *
- * @group webfonts
- */
-/**
- * Output the @font-face declaration for Guss webfonts.
- *
- * @param {String|List|Map} $fonts ($guss-webfonts) - Fonts to output
- * @param {Map} $registry ($guss-webfonts) - Font registry
- *
- * @requires {variable} guss-webfonts
- * @requires {mixin} guss-webfonts-single-declaration
- * @requires {mixin} guss-webfonts
- *
- * @group webfonts
- */
-@font-face {
-  font-family: "Guardian Agate Sans 1 Web";
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianAgateSans1Web/GuardianAgateSans1Web-Regular.eot");
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianAgateSans1Web/GuardianAgateSans1Web-Regular.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianAgateSans1Web/GuardianAgateSans1Web-Regular.woff2") format("woff2"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianAgateSans1Web/GuardianAgateSans1Web-Regular.woff") format("woff"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianAgateSans1Web/GuardianAgateSans1Web-Regular.ttf") format("truetype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianAgateSans1Web/GuardianAgateSans1Web-Regular.svg#GuardianAgateSans1Web-Regular") format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Guardian Agate Sans 1 Web";
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianAgateSans1Web/GuardianAgateSans1Web-Bold.eot");
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianAgateSans1Web/GuardianAgateSans1Web-Bold.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianAgateSans1Web/GuardianAgateSans1Web-Bold.woff2") format("woff2"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianAgateSans1Web/GuardianAgateSans1Web-Bold.woff") format("woff"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianAgateSans1Web/GuardianAgateSans1Web-Bold.ttf") format("truetype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianAgateSans1Web/GuardianAgateSans1Web-Bold.svg#GuardianAgateSans1Web-Bold") format("svg");
-  font-weight: 700;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Guardian Text Egyptian Web";
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Regular.eot");
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Regular.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Regular.woff2") format("woff2"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Regular.woff") format("woff"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Regular.ttf") format("truetype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Regular.svg#GuardianTextEgyptianWeb-Regular") format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Guardian Text Egyptian Web";
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-RegularItalic.eot");
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-RegularItalic.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-RegularItalic.woff2") format("woff2"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-RegularItalic.woff") format("woff"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-RegularItalic.ttf") format("truetype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-RegularItalic.svg#GuardianTextEgyptianWeb-RegularItalic") format("svg");
-  font-weight: 400;
-  font-style: italic;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Guardian Text Egyptian Web";
-  src: url("bower_components/guss-webfonts/0.2.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Medium.eot");
-  src: url("bower_components/guss-webfonts/0.2.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Medium.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.2.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Medium.woff2") format("woff2"), url("bower_components/guss-webfonts/0.2.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Medium.woff") format("woff"), url("bower_components/guss-webfonts/0.2.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Medium.ttf") format("truetype"), url("bower_components/guss-webfonts/0.2.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Medium.svg#GuardianTextEgyptianWeb-Medium") format("svg");
-  font-weight: 700;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Guardian Text Egyptian Web";
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-MediumItalic.eot");
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-MediumItalic.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-MediumItalic.woff2") format("woff2"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-MediumItalic.woff") format("woff"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-MediumItalic.ttf") format("truetype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-MediumItalic.svg#GuardianTextEgyptianWeb-MediumItalic") format("svg");
-  font-weight: 700;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Guardian Egyptian Web";
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-off/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Light.eot");
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-off/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Light.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-off/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Light.woff2") format("woff2"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-off/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Light.woff") format("woff"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-off/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Light.ttf") format("truetype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-off/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Light.svg#GuardianEgyptianWeb-Light") format("svg");
-  font-weight: 200;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Guardian Egyptian Web";
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Regular.eot");
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Regular.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Regular.woff2") format("woff2"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Regular.woff") format("woff"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Regular.ttf") format("truetype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Regular.svg#GuardianEgyptianWeb-Regular") format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Guardian Egyptian Web";
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.eot");
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.woff2") format("woff2"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.woff") format("woff"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.ttf") format("truetype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.svg#GuardianEgyptianWeb-Semibold") format("svg");
-  font-weight: 900;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Guardian Text Sans Web";
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-Regular.eot");
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-Regular.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-Regular.woff2") format("woff2"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-Regular.woff") format("woff"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-Regular.ttf") format("truetype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-Regular.svg#GuardianTextSansWeb-Regular") format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Guardian Text Sans Web";
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-RegularItalic.eot");
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-RegularItalic.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-RegularItalic.woff2") format("woff2"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-RegularItalic.woff") format("woff"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-RegularItalic.ttf") format("truetype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-RegularItalic.svg#GuardianTextSansWeb-RegularItalic") format("svg");
-  font-weight: 400;
-  font-style: italic;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Guardian Text Sans Web";
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-Medium.eot");
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-Medium.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-Medium.woff2") format("woff2"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-Medium.woff") format("woff"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-Medium.ttf") format("truetype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-Medium.svg#GuardianTextSansWeb-Medium") format("svg");
-  font-weight: 700;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Guardian Text Sans Web";
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-MediumItalic.eot");
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-MediumItalic.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-MediumItalic.woff2") format("woff2"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-MediumItalic.woff") format("woff"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-MediumItalic.ttf") format("truetype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianTextSansWeb/GuardianTextSansWeb-MediumItalic.svg#GuardianTextSansWeb-MediumItalic") format("svg");
-  font-weight: 700;
-  font-style: italic;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Guardian Sans Web";
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianSansWeb/GuardianSansWeb-Regular.eot");
-  src: url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianSansWeb/GuardianSansWeb-Regular.eot?#iefix") format("embedded-opentype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianSansWeb/GuardianSansWeb-Regular.woff2") format("woff2"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianSansWeb/GuardianSansWeb-Regular.woff") format("woff"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianSansWeb/GuardianSansWeb-Regular.ttf") format("truetype"), url("bower_components/guss-webfonts/0.1.0/hinting-off/kerning-on/original/GuardianSansWeb/GuardianSansWeb-Regular.svg#GuardianSansWeb-Regular") format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal; }
+/* Fonts - to be removed 
+$guss-webfonts-base-url: 'bower_components/guss-webfonts/';
+$guss-webfonts-charset: 'original';
+$guss-webfonts-hinting: 'off';
+$guss-webfonts-kerning: 'on';
+$guss-webfonts-version: 'webfonts';
+@import 'bower_components/guss-webfonts/src/_webfonts';
+
+@include guss-webfonts(
+    (
+        'Guardian Agate Sans 1 Web': (
+            (weight: 'regular', style: 'normal'),
+            (weight: 'bold',    style: 'normal', charset: 'original'),
+        ),
+        'Guardian Text Egyptian Web': (
+            (weight: 'regular',  style: 'normal'),
+            (weight: 'regular',  style: 'italic'),
+            (weight: 'medium',   style: 'normal', version: '0.2.0', use-as: (weight: 'bold')),
+            (weight: 'medium',   style: 'italic', hinting: 'off', use-as: (weight: 'bold', style: 'normal')),
+        ),
+        'Guardian Egyptian Web': (
+            (weight: 'light',    style: 'normal', kerning: 'off'),
+            (weight: 'regular',  style: 'normal'),
+            (weight: 'semibold', style: 'normal', use-as: (weight: 'ultrablack')),
+        ),
+        'Guardian Text Sans Web': (
+            (weight: 'regular',  style: 'normal'),
+            (weight: 'regular',  style: 'italic'),
+            (weight: 'medium',   style: 'normal', use-as: (weight: 'bold')),
+            (weight: 'medium',   style: 'italic', use-as: (weight: 'bold', style: 'italic')),
+        ),
+        'Guardian Sans Web': (
+            (weight: 'regular',  style: 'normal'),
+        )
+    )
+); */
 /* Font */
 @font-face {
   font-family: "Guardian Titlepiece";
@@ -338,8 +50,9 @@ body {
   color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "EgyptianText", serif;
-  margin: 0; }
+  font-family: "Guardian Egyptian Web", serif;
+  margin: 0;
+  font-style: normal; }
 
 h1 {
   font-family: "EgyptianHeadline", serif; }
@@ -347,8 +60,9 @@ h1 {
 p {
   font-size: 14px;
   line-height: 22px;
-  font-family: "Guardian Text Egyptian Web";
-  margin: 7px 0; }
+  font-family: "Guardian Egyptian Web";
+  margin: 7px 0;
+  font-style: normal; }
 
 /* Utitlities */
 .gs-container {
@@ -380,7 +94,7 @@ p {
   background-color: #214583;
   background-position: center center;
   background-size: cover;
-  padding: 2em 0;
+  padding: 2em 0 0 0;
   overflow: auto; }
 
 @media all and (min-width: 46.25em) {
@@ -423,32 +137,46 @@ p {
       font-size: 16px;
       line-height: 22px; } }
 
-@media all and (min-width: 46.25em) and (max-width: 61.24em) {
-  .guapp__proposition__image {
-    width: 300px; } }
-@media all and (min-width: 61.25em) and (max-width: 81.24em) {
-  .guapp__proposition__image {
-    width: 400px; } }
-@media all and (min-width: 46.25em) {
-  .guapp__proposition__image {
-    float: left; } }
-@media all and (max-width: 46.24em) {
-  .guapp__proposition__image {
-    margin: 0 auto;
-    display: block;
-    width: 60%; } }
-@media all and (max-width: 28.125em) {
-  .guapp__proposition__image {
-    width: 90%; } }
-@media all and (min-width: 46.25em) and (max-width: 61.24em) {
-  .guapp__proposition__image {
-    margin-top: 16px; } }
-@media all and (min-width: 46.25em) {
-  .guapp__proposition__image--mobile {
-    display: none; } }
-@media all and (max-width: 46.24em) {
-  .guapp__proposition__image--desktop {
-    display: none; } }
+.guapp__proposition__image {
+  margin-top: -50px; }
+  @media all and (min-width: 46.25em) and (max-width: 61.24em) {
+    .guapp__proposition__image {
+      width: 300px; } }
+  @media all and (min-width: 61.25em) and (max-width: 81.24em) {
+    .guapp__proposition__image {
+      width: 500px; } }
+  @media all and (min-width: 46.25em) {
+    .guapp__proposition__image {
+      float: right; } }
+  @media all and (max-width: 46.24em) {
+    .guapp__proposition__image {
+      margin: 0 auto;
+      display: block;
+      width: 60%; } }
+  @media all and (max-width: 28.125em) {
+    .guapp__proposition__image {
+      width: 90%; } }
+  @media all and (min-width: 46.25em) and (max-width: 61.24em) {
+    .guapp__proposition__image {
+      margin-top: 16px; } }
+  @media all and (min-width: 46.25em) {
+    .guapp__proposition__image--mobile {
+      display: none; } }
+  @media all and (min-width: 61.25em) {
+    .guapp__proposition__image--desktop {
+      display: block; } }
+  @media (max-width: 1056px) {
+    .guapp__proposition__image--desktop {
+      display: none; } }
+  @media all and (max-width: 46.24em) {
+    .guapp__proposition__image--desktop {
+      display: none; } }
+  @media all and (min-width: 61.25em) {
+    .guapp__proposition__image--tablet {
+      display: none; } }
+  @media all and (max-width: 46.24em) {
+    .guapp__proposition__image--tablet {
+      display: none; } }
 
 @media all and (min-width: 61.25em) and (max-width: 81.24em) {
   .guapp__proposition .guapp__appstores {
@@ -589,7 +317,8 @@ p {
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  margin: 0; }
+  margin: 0;
+  font-style: normal; }
 
 @media all and (max-width: 61.24em) {
   .guapp__feature--save__image {
@@ -633,33 +362,44 @@ p {
 .top-banner-ad-container {
   display: none !important; }
 
-/* animation */
-.fadeAnimation {
+.button.watch__more__button {
+  background-color: #005689;
+  color: white;
+  border-radius: 62.5em;
+  vertical-align: top;
+  border-width: 0.0625em;
+  box-sizing: border-box;
+  font-family: "Guardian Text Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  padding: 0 0.625em;
+  margin-right: 0.625em;
+  line-height: 1.75em;
+  height: 26px !important;
+  display: block;
+  width: 150px;
+  float: left;
+  margin-top: 10px; }
+  .button.watch__more__button:hover {
+    background-color: #005689;
+    border: #005689; }
+
+.animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-@-webkit-keyframes fadeUp {
+@-webkit-keyframes fadeIn {
   0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0); }
+    opacity: 0; }
   100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none; } }
-@keyframes fadeUp {
+    opacity: 1; } }
+@keyframes fadeIn {
   0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0); }
+    opacity: 0; }
   100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none; } }
-.fadeUp {
-  -webkit-animation-name: fadeUp;
-  animation-name: fadeUp; }
+    opacity: 1; } }
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
 
 /*# sourceMappingURL=style.css.map */
