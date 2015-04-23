@@ -162,10 +162,14 @@ p {
   @media all and (min-width: 46.25em) {
     .guapp__proposition__image--mobile {
       display: none; } }
+  @media all and (min-width: 46.25em) {
+    .guapp__proposition__image--tablet {
+      margin-top: -20px;
+      width: 300px; } }
   @media all and (min-width: 61.25em) {
     .guapp__proposition__image--desktop {
       display: block; } }
-  @media (max-width: 1056px) {
+  @media (max-width: 1059px) {
     .guapp__proposition__image--desktop {
       display: none; } }
   @media all and (max-width: 46.24em) {
@@ -312,6 +316,14 @@ p {
   @media all and (min-width: 61.25em) {
     .guapp__feature:nth-of-type(3n+1) {
       clear: both; } }
+  .guapp__feature img.just {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
+  .guapp__feature img.football {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
 
 .guapp__feature__title {
   font-weight: bold;

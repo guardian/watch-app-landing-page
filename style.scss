@@ -155,13 +155,11 @@ p {
     }
 }
 .guapp__proposition__image {
-	
 	margin-top: -50px;
+	
 	
     @include mq(tablet, desktop) {
         width: 300px;
-        
-        
     }
     
     @include mq(desktop, wide) {
@@ -173,13 +171,13 @@ p {
     @include mq($from: tablet) {
         float: right;
         
-        
     }
     
     @include mq($to: tablet) {
         margin: 0 auto;
         display: block;
         width: 60%;
+
     }
     
     @include mq($to: 450px) {
@@ -188,6 +186,7 @@ p {
     
     @include mq(tablet, desktop) {
         margin-top: 16px;
+        
     }
     
     &--mobile {
@@ -196,7 +195,15 @@ p {
         }
     }
     
- 
+ &--tablet{
+	 @include mq($from: tablet) {
+		 margin-top: -20px;
+		 width: 300px;
+
+
+		 		 }
+
+ }
   
   &--desktop{
 		 @include mq($from: desktop) {
@@ -205,11 +212,13 @@ p {
 	}
 	
 	&--desktop{
-		 @media (max-width: 1056px) {
+		 @media (max-width: 1059px) {
 			 display: none;
 			  }
 
 	}
+	
+
   
 	&--desktop{
 		 @include mq($to: tablet) {
@@ -402,7 +411,6 @@ and (max-device-width : 480px) {
         max-width: 100%;
         border-bottom: 1px solid #dddbd7;
         margin-bottom: 12px;
-        
         @include mq($to: 450px) {
             display: none;
         }
@@ -410,12 +418,26 @@ and (max-device-width : 480px) {
     &:nth-of-type(2n+1) {
         @include mq(450px, desktop) {
             clear: both;
+           
         }
     }
     &:nth-of-type(3n+1) {
         @include mq($from: desktop) {
             clear: both;
+            
         }
+    }
+    
+    img.just{
+	    margin-left: auto;
+        margin-right:auto;
+        display: block; 
+    }
+    
+     img.football{
+	    margin-left: auto;
+        margin-right:auto;
+        display: block; 
     }
 }
 .guapp__feature__title {
