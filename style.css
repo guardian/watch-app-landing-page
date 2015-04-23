@@ -99,7 +99,7 @@ p {
 
 @media all and (min-width: 46.25em) {
   .guapp__proposition__container {
-    width: 560px;
+    width: 520px;
     float: left; } }
 @media all and (min-width: 46.25em) and (max-width: 61.24em) {
   .guapp__proposition__container {
@@ -108,6 +108,12 @@ p {
   .guapp__proposition__container {
     max-width: 500px;
     margin: 0 auto; } }
+@media (max-width: 1100px) {
+  .guapp__proposition__container {
+    width: 450px; } }
+@media (max-width: 750px) {
+  .guapp__proposition__container {
+    width: 410px; } }
 
 .guapp__proposition__title {
   font-family: "Guardian Titlepiece";
@@ -138,7 +144,7 @@ p {
       line-height: 22px; } }
 
 .guapp__proposition__image {
-  margin-top: -50px; }
+  margin-top: -40px; }
   @media all and (min-width: 46.25em) and (max-width: 61.24em) {
     .guapp__proposition__image {
       width: 300px; } }
@@ -169,7 +175,7 @@ p {
   @media all and (min-width: 61.25em) {
     .guapp__proposition__image--desktop {
       display: block; } }
-  @media (max-width: 1059px) {
+  @media (max-width: 979px) {
     .guapp__proposition__image--desktop {
       display: none; } }
   @media all and (max-width: 46.24em) {
