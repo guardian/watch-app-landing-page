@@ -75,7 +75,6 @@ p {
 /* Utitlities */
 .gs-container {
     margin: 0 auto;
-    max-width: 81.25em; /* 1300px */
 }
 
 .list {
@@ -102,35 +101,28 @@ p {
 .guapp__proposition {
     color: #fff;
     background-image: url("images/proposition__background_dark.png");
-    background-color: #214583;
+    background-color: #333;
     background-position: center center;
     background-size: cover;
-    padding: 2em 0 0 0;
+    padding: 0;
     overflow: auto;
 }
 .guapp__proposition__container {
+    padding-top: 12px;
+
     @include mq($from: tablet) {
         width: 520px;
         float: left;
     }
 
-    @include mq(tablet, desktop) {
-        width: 420px;
+    @include mq(tablet, leftCol) {
+        width: 380px;
     }
     
     @include mq($to: tablet) {
         max-width: 500px;
         margin: 0 auto;
-    }
-    
-    @media (max-width: 1100px) {
-			 width: 450px;
-			  }
-			  
-			  @media (max-width: 750px) {
-			 width: 370px;
-			  }
-  
+    }  
 }
 .guapp__proposition__title {
     font-family: "Guardian Titlepiece";
@@ -140,7 +132,13 @@ p {
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     margin-bottom: 18px;
-    
+
+    @include mq($to: leftCol) {
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 9px;
+    }
+
     @include mq($to: desktop) {
         font-size: 32px;
         line-height: 38px;
@@ -158,37 +156,34 @@ p {
     line-height: 26px;
     opacity: 0.8;
     
-    @include mq($to: desktop) {
+    @include mq($to: leftCol) {
         font-size: 16px;
         line-height: 22px;
     }
 }
 .guapp__proposition__image {
-	margin-top: -40px;
-	
-	
+    @include mq(tablet) {
+        float: right;
+    }
+    
     @include mq(tablet, desktop) {
         width: 300px;
     }
-    
-    @include mq(desktop, wide) {
-        width: 500px;
-        
-        
+
+    @include mq(desktop, leftCol) {
+        width: 460px;
     }
 
-    @include mq($from: tablet) {
-        float: right;
-        
+    @include mq(leftCol, wide) {
+        width: 500px;
     }
-    
+
     @include mq($to: tablet) {
         margin: 0 auto;
         display: block;
         width: 60%;
-
     }
-    
+
     @include mq($to: 450px) {
         width: 90%;
     }
@@ -208,9 +203,7 @@ p {
 	 @include mq($from: tablet) {
 		 margin-top: -20px;
 		 width: 300px;
-
-
-		 		 }
+}
 
  }
   

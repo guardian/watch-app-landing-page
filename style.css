@@ -66,9 +66,7 @@ p {
 
 /* Utitlities */
 .gs-container {
-  margin: 0 auto;
-  max-width: 81.25em;
-  /* 1300px */ }
+  margin: 0 auto; }
 
 .list {
   margin: 0;
@@ -91,29 +89,25 @@ p {
 .guapp__proposition {
   color: #fff;
   background-image: url("images/proposition__background_dark.png");
-  background-color: #214583;
+  background-color: #333;
   background-position: center center;
   background-size: cover;
-  padding: 2em 0 0 0;
+  padding: 0;
   overflow: auto; }
 
-@media all and (min-width: 46.25em) {
-  .guapp__proposition__container {
-    width: 520px;
-    float: left; } }
-@media all and (min-width: 46.25em) and (max-width: 61.24em) {
-  .guapp__proposition__container {
-    width: 420px; } }
-@media all and (max-width: 46.24em) {
-  .guapp__proposition__container {
-    max-width: 500px;
-    margin: 0 auto; } }
-@media (max-width: 1100px) {
-  .guapp__proposition__container {
-    width: 450px; } }
-@media (max-width: 750px) {
-  .guapp__proposition__container {
-    width: 370px; } }
+.guapp__proposition__container {
+  padding-top: 12px; }
+  @media all and (min-width: 46.25em) {
+    .guapp__proposition__container {
+      width: 520px;
+      float: left; } }
+  @media all and (min-width: 46.25em) and (max-width: 71.24em) {
+    .guapp__proposition__container {
+      width: 380px; } }
+  @media all and (max-width: 46.24em) {
+    .guapp__proposition__container {
+      max-width: 500px;
+      margin: 0 auto; } }
 
 .guapp__proposition__title {
   font-family: "Guardian Titlepiece";
@@ -123,6 +117,11 @@ p {
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   margin-bottom: 18px; }
+  @media all and (max-width: 71.24em) {
+    .guapp__proposition__title {
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 9px; } }
   @media all and (max-width: 61.24em) {
     .guapp__proposition__title {
       font-size: 32px;
@@ -138,55 +137,56 @@ p {
   font-size: 20px;
   line-height: 26px;
   opacity: 0.8; }
-  @media all and (max-width: 61.24em) {
+  @media all and (max-width: 71.24em) {
     .guapp__proposition__intro {
       font-size: 16px;
       line-height: 22px; } }
 
-.guapp__proposition__image {
-  margin-top: -40px; }
-  @media all and (min-width: 46.25em) and (max-width: 61.24em) {
-    .guapp__proposition__image {
-      width: 300px; } }
-  @media all and (min-width: 61.25em) and (max-width: 81.24em) {
-    .guapp__proposition__image {
-      width: 500px; } }
-  @media all and (min-width: 46.25em) {
-    .guapp__proposition__image {
-      float: right; } }
-  @media all and (max-width: 46.24em) {
-    .guapp__proposition__image {
-      margin: 0 auto;
-      display: block;
-      width: 60%; } }
-  @media all and (max-width: 28.125em) {
-    .guapp__proposition__image {
-      width: 90%; } }
-  @media all and (min-width: 46.25em) and (max-width: 61.24em) {
-    .guapp__proposition__image {
-      margin-top: 16px; } }
-  @media all and (min-width: 46.25em) {
-    .guapp__proposition__image--mobile {
-      display: none; } }
-  @media all and (min-width: 46.25em) {
-    .guapp__proposition__image--tablet {
-      margin-top: -20px;
-      width: 300px; } }
-  @media all and (min-width: 61.25em) {
-    .guapp__proposition__image--desktop {
-      display: block; } }
-  @media (max-width: 979px) {
-    .guapp__proposition__image--desktop {
-      display: none; } }
-  @media all and (max-width: 46.24em) {
-    .guapp__proposition__image--desktop {
-      display: none; } }
-  @media all and (min-width: 61.25em) {
-    .guapp__proposition__image--tablet {
-      display: none; } }
-  @media all and (max-width: 46.24em) {
-    .guapp__proposition__image--tablet {
-      display: none; } }
+@media all and (min-width: 46.25em) {
+  .guapp__proposition__image {
+    float: right; } }
+@media all and (min-width: 46.25em) and (max-width: 61.24em) {
+  .guapp__proposition__image {
+    width: 300px; } }
+@media all and (min-width: 61.25em) and (max-width: 71.24em) {
+  .guapp__proposition__image {
+    width: 460px; } }
+@media all and (min-width: 71.25em) and (max-width: 81.24em) {
+  .guapp__proposition__image {
+    width: 500px; } }
+@media all and (max-width: 46.24em) {
+  .guapp__proposition__image {
+    margin: 0 auto;
+    display: block;
+    width: 60%; } }
+@media all and (max-width: 28.125em) {
+  .guapp__proposition__image {
+    width: 90%; } }
+@media all and (min-width: 46.25em) and (max-width: 61.24em) {
+  .guapp__proposition__image {
+    margin-top: 16px; } }
+@media all and (min-width: 46.25em) {
+  .guapp__proposition__image--mobile {
+    display: none; } }
+@media all and (min-width: 46.25em) {
+  .guapp__proposition__image--tablet {
+    margin-top: -20px;
+    width: 300px; } }
+@media all and (min-width: 61.25em) {
+  .guapp__proposition__image--desktop {
+    display: block; } }
+@media (max-width: 979px) {
+  .guapp__proposition__image--desktop {
+    display: none; } }
+@media all and (max-width: 46.24em) {
+  .guapp__proposition__image--desktop {
+    display: none; } }
+@media all and (min-width: 61.25em) {
+  .guapp__proposition__image--tablet {
+    display: none; } }
+@media all and (max-width: 46.24em) {
+  .guapp__proposition__image--tablet {
+    display: none; } }
 
 @media all and (min-width: 61.25em) and (max-width: 81.24em) {
   .guapp__proposition .guapp__appstores {
